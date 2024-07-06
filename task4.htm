@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         
+            body { background: #eee; margin: 0}
+            #container { 
+                max-width: 1000px; 
+                margin: auto; 
+                display: grid; 
+                grid-column-gap: 10px;
+                 grid-row-gap: 10px;
+             text-align: center;
+                grid-template-rows: 50px 40px 500px 60px 40px;
+            }
+            header { background: orange; }
+            nav { background: yellow; }
+            main { background: white; }
+            aside { background: gray; }
+            footer { background: red; }
+
+            @media only screen and (min-width: 768px) {
+    #container{ display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(5, 1fr);
+grid-column-gap: 10px;
+grid-row-gap: 10px;
+}
+
+.div1 { grid-area: 1 / 1 / 2 / 6; }
+.div2 { grid-area: 2 / 4 / 6 / 5; }
+.div3 { grid-area: 2 / 5 / 6 / 6; }
+.div4 { grid-area: 5 / 1 / 6 / 4; }
+.div5 { grid-area: 2 / 1 / 5 / 4; }
+}
+.hght{ height: 100px;}
+
+
+
+           
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header class="div1 hght ">header</header>
+        <nav class="div2   ">nav</nav>
+        <main class="div5  ">artcle</main>
+        <aside class="div3 ">ads</aside>
+        <footer class="div4 ">footer</footer>
+    </div>
+</body>
+</html>
